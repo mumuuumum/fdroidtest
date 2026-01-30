@@ -47,6 +47,12 @@ android {
          */
         testInstrumentationRunnerArguments disableAnalytics: 'true'
         vectorDrawables.useSupportLibrary = true
+
+        externalNativeBuild {
+            ndk {
+                abiFilters 'riscv64'
+            }
+        }
     }
 
     ext {

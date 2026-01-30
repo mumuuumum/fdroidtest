@@ -40,6 +40,12 @@ android {
         minSdk = 21
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         testInstrumentationRunnerArguments["disableAnalytics"] = "true"
+        
+        externalNativeBuild {
+            ndk {
+                abiFilters 'riscv64'
+            }
+        }
     }
     buildTypes {
         getByName("release") {

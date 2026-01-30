@@ -10,6 +10,12 @@ android {
     compileSdk = libs.versions.compileSdk.get().toInt()
     defaultConfig {
         minSdk = 21
+        
+        externalNativeBuild {
+            ndk {
+                abiFilters 'riscv64'
+            }
+        }
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
