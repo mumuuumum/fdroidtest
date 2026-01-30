@@ -19,7 +19,7 @@ android {
 
         externalNativeBuild {
             ndk {
-                abiFilters 'riscv64'
+                abiFilters("riscv64")
             }
         }
     }
