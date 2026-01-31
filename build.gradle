@@ -1,11 +1,5 @@
 buildscript {
     repositories {
-        maven {
-            url 'https://maven.aliyun.com/repository/public/'
-        }
-        maven {
-            url 'https://maven.aliyun.com/repository/central'
-        }
         mavenCentral()
         google()
         maven { url '/opt/android-plugin/repo-agp7.4-dev' }
@@ -28,12 +22,6 @@ plugins {
 }
 allprojects {
     repositories {
-        maven {
-            url 'https://maven.aliyun.com/repository/public/'
-        }
-        maven {
-            url 'https://maven.aliyun.com/repository/central'
-        }
         mavenCentral()
         google()
         maven { url '/opt/android-plugin/repo-agp7.4-dev' }
