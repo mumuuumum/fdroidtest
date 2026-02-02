@@ -26,6 +26,7 @@ package org.fdroid.fdroid;
 import android.app.ActivityManager;
 import android.app.ActivityManager.RunningAppProcessInfo;
 import android.app.Application;
+import android.content.pm.ApplicationInfo;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
