@@ -291,6 +291,19 @@ public class FDroidApp extends Application implements androidx.work.Configuratio
     public void onCreate() {
         super.onCreate();
         instance = this;
+
+        // --- 针对 RISC-V 架构的兼容性修复 Start ---
+        if (Build.SUPPORTED_ABIS != null) {
+            for (String abi : Build.SUPPORTED_ABIS) {
+                if ("riscv64".equals(abi)) {
+                    Log.i(TAG, "检测到 RISC-V 架构，应用图形渲染兼容性修复");
+                    getApplicationInfo().flags &= ~ApplicationInfo.FLAG_HARDWARE_ACCELERATED;
+                    break;
+                }
+            }
+        }
+        // --- 针对 RISC-V 架构的兼容性修复 End ---
+
         if (BuildConfig.DEBUG) {
             StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
                     .detectAll()
