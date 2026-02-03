@@ -74,7 +74,7 @@
         android:dataExtractionRules="@xml/backup_extraction_rules"
         android:description="@string/app_description"
         android:fullBackupContent="@xml/backup_rules"
-        android:hardwareAccelerated="true"
+        android:hardwareAccelerated="false"
         android:icon="@drawable/ic_launcher"
         android:label="${applicationLabel}"
         android:localeConfig="@xml/locales_config"
